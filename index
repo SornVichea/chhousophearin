@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chhouy Sophearin - Assistant Store Manager</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        /* A little extra polish for the timeline */
+        .timeline-item:last-child .timeline-line {
+            display: none;
+        }
+
+        /* --- Animations --- */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in-up {
+            opacity: 0; /* Start hidden */
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
+        /* Staggered Delay Utilities */
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+    </style>
+    <!-- Load Lucide Icons -->
+    <script src="https://cdn.jsdelivr.net/npm/lucide-static@latest/dist/lucide.min.js"></script>
+    <!-- Script to inject icons -->
+    <script>
+        // Wait for the DOM to be fully loaded before running the icon script
+        document.addEventListener("DOMContentLoaded", function() {
+            try {
+                lucide.createIcons();
+            } catch (error) {
+                console.error("Error creating Lucide icons:", error);
+            }
+        });
+    </script>
+</head>
+<body class="bg-slate-100 text-slate-700">
+
+    <!-- Main CV Container -->
+    <div class="container mx-auto my-12 p-4 md:p-8 max-w-6xl fade-in">
+        <div class="bg-white rounded-xl shadow-2xl overflow-hidden">
+            
+            <!-- Header / Masthead -->
+            <header class="bg-slate-50 p-8 md:p-12 md:flex md:items-center md:space-x-8 fade-in-up delay-100">
+                <div class="flex-shrink-0 mb-6 md:mb-0">
+                    <img src="https://res.cloudinary.com/thearavotey/image/upload/v1760786673/Chhoy_Sophearin_tjgrf2.png" 
+                         alt="Chhouy Sophearin profile picture" 
+                         class="rounded-full w-40 h-40 md:w-48 md:h-48 object-cover shadow-lg border-4 border-white"
+                         onerror="this.src='https://placehold.co/192x192/E0E7FF/333?text=CS'; this.onerror=null;">
+                </div>
+                <div class="flex-grow">
+                    <h1 class="text-4xl md:text-5xl font-extrabold text-slate-800">CHHOUY SOPHEARIN</h1>
+                    <h2 class="text-2xl font-light text-blue-600 mt-1">Assistant Store Manager</h2>
+                    <p class="text-lg text-slate-600 leading-relaxed mt-4">
+                        Experienced Assistant Manager with 1 year of proven success in retail management and customer service. Proven ability to exceed sales targets, achieving over $264,000+ in 2024.
+                    </p>
+                </div>
+            </header>
+
+            <!-- Main Content Grid -->
+            <div class="grid md:grid-cols-3">
+
+                <!-- Left Sidebar (Contact, Skills, Education) -->
+                <aside class="md:col-span-1 bg-white p-8 md:p-12 border-t md:border-t-0 md:border-r border-slate-200 fade-in-up delay-200">
+                    
+                    <!-- Contact Section -->
+                    <section class="mb-8">
+                        <h3 class="text-lg font-bold text-blue-700 uppercase tracking-wider mb-4 flex items-center">
+                            <i data-lucide="smartphone" class="h-5 w-5 mr-2"></i>
+                            Contact
+                        </h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i data-lucide="phone" class="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5"></i>
+                                <span class="ml-3">
+                                    <a href="tel:0969659100" class="hover:text-blue-700 transition-colors">096 965 9100</a>
+                                </span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="mail" class="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5"></i>
+                                <span class="ml-3">
+                                    <a href="mailto:rinsophea96@gmail.com" class="hover:text-blue-700 break-words transition-colors">rinsophea96@gmail.com</a>
+                                </span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="map-pin" class="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5"></i>
+                                <span class="ml-3 break-words">Kampuchea Krom Boulevard (Street 128), Khan Prampi Makara, Cambodia</span>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <!-- Skills Section -->
+                    <section class="mb-8">
+                        <h3 class="text-lg font-bold text-blue-700 uppercase tracking-wider mb-4 flex items-center">
+                            <i data-lucide="award" class="h-5 w-5 mr-2"></i>
+                            Skills
+                        </h3>
+                        <div class="flex flex-wrap -m-1">
+                            <span class="m-1 bg-blue-50 text-blue-700 text-sm font-medium px-3 py-1 rounded-full transition-transform hover:scale-105 cursor-default">Leadership</span>
+                            <span class="m-1 bg-blue-50 text-blue-700 text-sm font-medium px-3 py-1 rounded-full transition-transform hover:scale-105 cursor-default">Time Management</span>
+                            <span class="m-1 bg-blue-50 text-blue-700 text-sm font-medium px-3 py-1 rounded-full transition-transform hover:scale-105 cursor-default">Team Building</span>
+                            <span class="m-1 bg-blue-50 text-blue-700 text-sm font-medium px-3 py-1 rounded-full transition-transform hover:scale-105 cursor-default">Customer Service</span>
+                            <span class="m-1 bg-blue-50 text-blue-700 text-sm font-medium px-3 py-1 rounded-full transition-transform hover:scale-105 cursor-default">Inventory Management</span>
+                            <span class="m-1 bg-blue-50 text-blue-700 text-sm font-medium px-3 py-1 rounded-full transition-transform hover:scale-105 cursor-default">Sale Analysis</span>
+                            <span class="m-1 bg-blue-50 text-blue-700 text-sm font-medium px-3 py-1 rounded-full transition-transform hover:scale-105 cursor-default">Problem Solving</span>
+                            <span class="m-1 bg-blue-50 text-blue-700 text-sm font-medium px-3 py-1 rounded-full transition-transform hover:scale-105 cursor-default">KPIs</span>
+                            <span class="m-1 bg-blue-50 text-blue-700 text-sm font-medium px-3 py-1 rounded-full transition-transform hover:scale-105 cursor-default">Microsoft Office</span>
+                        </div>
+                    </section>
+
+                    <!-- Languages Section -->
+                    <section class="mb-8">
+                        <h3 class="text-lg font-bold text-blue-700 uppercase tracking-wider mb-4 flex items-center">
+                            <i data-lucide="globe-2" class="h-5 w-5 mr-2"></i>
+                            Languages
+                        </h3>
+                        <ul class="space-y-1">
+                            <li><strong>Khmer:</strong> <span class="text-slate-600">Perfect</span></li>
+                            <li><strong>English:</strong> <span class="text-slate-600">Intermediate</span></li>
+                        </ul>
+                    </section>
+
+                    <!-- Education Section -->
+                    <section>
+                        <h3 class="text-lg font-bold text-blue-700 uppercase tracking-wider mb-4 flex items-center">
+                            <i data-lucide="graduation-cap" class="h-5 w-5 mr-2"></i>
+                            Education
+                        </h3>
+                        <!-- Education 1 -->
+                        <div class="mb-4">
+                            <h4 class="text-md font-semibold text-slate-800">Bachelor Degree (Year Four)</h4>
+                            <p class="text-slate-600">National Technical Training Institute</p>
+                            <p class="text-sm text-slate-500">2022 - Present</p>
+                            <ul class="list-disc list-outside pl-5 mt-1 text-slate-500">
+                                <li>Local store Marketing</li>
+                                <li>Smart business</li>
+                            </ul>
+                        </div>
+                        <!-- Education 2 -->
+                        <div>
+                            <h4 class="text-md font-semibold text-slate-800">Graduate High School</h4>
+                            <p class="text-slate-600">Prahbat Soramarit High School</p>
+                            <p class="text-sm text-slate-500">2022</p>
+                        </div>
+                    </section>
+                </aside>
+
+                <!-- Right Main Content (Experience, Reference) -->
+                <main class="md:col-span-2 bg-white p-8 md:p-12 border-t border-slate-200 fade-in-up delay-300">
+                    
+                    <!-- Work Experience Section -->
+                    <section class="mb-12">
+                        <h3 class="text-lg font-bold text-blue-700 uppercase tracking-wider mb-6 flex items-center">
+                            <i data-lucide="briefcase" class="h-5 w-5 mr-2"></i>
+                            Work Experience
+                        </h3>
+                        
+                        <div class="relative">
+                            <!-- The timeline line -->
+                            <div class="absolute left-2 top-2 h-full w-0.5 bg-slate-200"></div>
+                            
+                            <!-- Job 1 -->
+                            <div class="relative pl-8 pb-8 timeline-item group">
+                                <!-- The timeline dot -->
+                                <div class="absolute left-0 top-1 w-4 h-4 bg-blue-500 rounded-full border-4 border-white transition-transform group-hover:scale-125"></div>
+                                <!-- The content -->
+                                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline">
+                                    <h4 class="text-xl font-semibold text-slate-800 transition-colors group-hover:text-blue-600">Assistant Store Manager</h4>
+                                    <span class="text-sm font-light text-slate-500 mt-1 sm:mt-0">01/11/2023 - Present</span>
+                                </div>
+                                <ul class="list-disc list-outside pl-5 mt-2 space-y-1 text-slate-600">
+                                    <li>Analyzed sales to Maximize profitable in store to top management.</li>
+                                    <li>Exceed annual sales target 7% of each year.</li>
+                                    <li>Exceed EBIT store level target 20% in 2024.</li>
+                                    <li>Prepared and decorated store for all event and seasonable.</li>
+                                    <li>Managed all P&L and KPI to met and over target.</li>
+                                    <li>Mentored and trained by 8 sale associates of business.</li>
+                                    <li>Helped to develop and implement employee performance improvement to increase in customer satisfaction.</li>
+                                    <li>Work closely with area coach, head of brand and top management in company.</li>
+                                    <li class="font-semibold text-slate-700">Product Making Sundae Award of the year in 2024.</li>
+                                    <li>Implement and quickly respond on communication and information.</li>
+                                    <li>Managed store operation day-to-day.</li>
+                                    <li>Trained new employee and Shift Managers above.</li>
+                                    <li>Managed on inventory and supply order.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Job 2 -->
+                            <div class="relative pl-8 pb-8 timeline-item group">
+                                <!-- The timeline dot -->
+                                <div class="absolute left-0 top-1 w-4 h-4 bg-blue-500 rounded-full border-4 border-white transition-transform group-hover:scale-125"></div>
+                                <!-- The content -->
+                                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline">
+                                    <h4 class="text-xl font-semibold text-slate-800 transition-colors group-hover:text-blue-600">Shift Manager</h4>
+                                    <span class="text-sm font-light text-slate-500 mt-1 sm:mt-0">01/01/2023 - 01/11/2023</span>
+                                </div>
+                                <ul class="list-disc list-outside pl-5 mt-2 space-y-1 text-slate-600">
+                                    <li>Improve all staff knowledge (product making; customer service).</li>
+                                    <li>Handled cash register and financial transaction.</li>
+                                    <li>Assisted inventory management and reduce on lost.</li>
+                                    <li>Provide excellent customer service.</li>
+                                    <li>Increased on gross sale and up sale.</li>
+                                    <li>Increased on $/Ticket.</li>
+                                    <li>Helped analyzed sale to staff everyday and pushed on sale goal in head of store manager.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Reference Section -->
+                    <section>
+                        <h3 class="text-lg font-bold text-blue-700 uppercase tracking-wider mb-4 flex items-center">
+                            <i data-lucide="users" class="h-5 w-5 mr-2"></i>
+                            Reference
+                        </h3>
+                        <div class="p-4 bg-slate-50 rounded-lg">
+                            <p class="font-semibold text-slate-800">Ngeab Borik</p>
+                            <p class="text-slate-600">Store Manager</p>
+                            <p class="text-slate-600 mt-2">
+                                <a href="tel:0762148481" class="hover:text-blue-700 transition-colors">076 214 8481</a>
+                            </p>
+                            <p class="text-slate-600">
+                                <a href="mailto:borikngeab@gmail.com" class="hover:text-blue-700 break-all transition-colors">borikngeab@gmail.com</a>
+                            </p>
+                        </div>
+                    </section>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script to inject icons (MOVED TO HEAD) -->
+    
+</body>
+</html>
